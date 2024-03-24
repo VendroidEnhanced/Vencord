@@ -1,9 +1,9 @@
 name: Release Mobile File
 on:
-    - workflow_dispatch
-    - push:
+    [ workflow_dispatch,
+     push:
         tags:
-            - v*
+            - v*]
 
 jobs:
     Publish:
