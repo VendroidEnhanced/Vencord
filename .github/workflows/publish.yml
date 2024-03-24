@@ -1,6 +1,7 @@
 name: Release Mobile File
 on:
-    push:
+    - workflow_dispatch
+    - push:
         tags:
             - v*
 
