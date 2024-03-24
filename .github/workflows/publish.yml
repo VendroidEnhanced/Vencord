@@ -19,9 +19,6 @@ jobs:
 
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
-              
-            - name: Bomb arrpc
-              run: rm -r src/plugins/arRPC.web
 
             - name: Build web
               run: pnpm buildWeb --standalone
