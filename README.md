@@ -4,4 +4,4 @@ This repo has one purpose: fetch latest vencord, nuke incompatible plugins, inje
 
 To get Vencord go on [vencord.dev](https://vencord.dev)
 
-For Vendroid go on [VendroidEnhancements/Vendroid](https://github.com/VendroidEnhancements/Vendroid)
+For Vendroid go on [VendroidEnhanced/Vendroid](https://github.com/VendroidEnhanced/Vendroid)
