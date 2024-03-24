@@ -1,4 +1,4 @@
-name: Release Browser Extension
+name: Release Mobile File
 on:
     push:
         tags:
@@ -6,7 +6,7 @@ on:
 
 jobs:
     Publish:
-        if: github.repository == 'Vendicated/Vencord'
+        if: github.repository == 'VendroidEnhanced/Vencord'
         runs-on: ubuntu-latest
 
         steps:
@@ -28,18 +28,5 @@ jobs:
                   node-version: 19
                   cache: "pnpm"
 
-            - name: Install dependencies
-              run: pnpm install --frozen-lockfile
-
-            - name: Build web
-              run: pnpm buildWeb --standalone
-
-            - name: Publish extension
-              run: |
-                  cd dist/chromium-unpacked
-                  pnpx chrome-webstore-upload-cli@2.1.0 upload --auto-publish
-              env:
-                  EXTENSION_ID: ${{ secrets.CHROME_EXTENSION_ID }}
-                  CLIENT_ID: ${{ secrets.CHROME_CLIENT_ID }}
-                  CLIENT_SECRET: ${{ secrets.CHROME_CLIENT_SECRET }}
-                  REFRESH_TOKEN: ${{ secrets.CHROME_REFRESH_TOKEN }}
+            - name: ls
+              run: ls
