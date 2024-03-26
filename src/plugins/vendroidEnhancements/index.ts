@@ -41,28 +41,6 @@ export default definePlugin({
                 replace: "$1"
             }]
         },
-        // better sidebar handling, same as above (they did make all patches for now)
-        {
-            find: "app view user trigger debugging",
-            replacement: [
-                {
-                    match: /(let\s\i=)(\(0,\i\.useStateFromStores\))(\(\[\i\.default\],\(\)=>\i\.default\.isFullscreenInContext\(\).{0,100})\[\i\.fullWidth\]\:\i\.isMobile\,/,
-                    replace: "let isSidebarOpen=$2([window.VencordMobile.MobileWebSidebarStore],()=>window.VencordMobile.MobileWebSidebarStore.getIsOpen());$1$2$3['vc-vendroid-sidebar']:true,['vc-vendroid-sidebar-closed']:!isSidebarOpen,"
-                },
-                {
-                    match: /(hideSidebar\:.{0,20})\|\|!\i\}\),/,
-                    replace: "$1}),"
-                },
-                {
-                    match: /(children\:\[)(\i)&&(.{10,30}className:\i\.guilds),/,
-                    replace: "$1$3+' vc-vendroid-sidebar'+($2?'':' vc-vendroid-sidebar-closed'),"
-                },
-                {
-                    match: /(useCallback\(\(\)=>)(\i\.default)\.openSidebar\(\)/,
-                    replace: "$1{window.VencordMobile.MobileWebSidebarStore.getIsOpen()?$2.closeSidebar():$2.openSidebar()}"
-                },
-            ]
-        },
         // Fix GIF picker
         {
             find: "Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL",
