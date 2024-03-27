@@ -113,7 +113,7 @@ export default definePlugin({
             {
                 section: "VendroidSettings",
                 label: "Vendroid Settings",
-                element: require("@components/VencordSettings/VendroidTab").default,
+                element: require("@components/VencordSettings/BackupAndRestoreTab").default,
                 className: "vc-vendroid"
             },
             IS_DEV && {
