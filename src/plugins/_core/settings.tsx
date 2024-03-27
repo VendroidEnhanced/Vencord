@@ -110,6 +110,12 @@ export default definePlugin({
                 element: require("@components/VencordSettings/BackupAndRestoreTab").default,
                 className: "vc-backup-restore"
             },
+            {
+                section: "VendroidSettings",
+                label: "Vendroid Settings",
+                element: require("@components/VencordSettings/VendroidTab").default,
+                className: "vc-vendroid"
+            },
             IS_DEV && {
                 section: "VencordPatchHelper",
                 label: "Patch Helper",
