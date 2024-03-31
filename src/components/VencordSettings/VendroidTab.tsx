@@ -29,18 +29,16 @@ function VendroidTab() {
                 <Flex flexDirection="column">
                     <Text style={{ fontWeight: "bold", marginBottom: "3px" }}>Updater</Text>
                     <Text>Currently, Vencord isn't auto-updated to save data. However, you can enable automatic update checking for Vendroid itself in <Link href="https://vendroid.nin0dev.com/settings">the app settings.</Link></Text>
-                    <Flex flexDirection="row">
-                        <Button
-                            color={Button.Colors.TRANSPARENT}
-                            style={{ marginTop: "3px" }} href="https://vendroid.nin0dev.com/settings">
-                            Update Vencord
-                        </Button>
-                        <Button
-                            color={Button.Colors.TRANSPARENT}
-                            style={{ marginTop: "3px" }} href="https://vendroid.nin0dev.com/settings">
-                            Check for Vendroid updates
-                        </Button>
-                    </Flex>
+                    <Button
+                        color={Button.Colors.TRANSPARENT}
+                        style={{ marginTop: "3px" }} href="https://vendroid.nin0dev.com/settings">
+                        Update Vencord
+                    </Button>
+                    <Button
+                        color={Button.Colors.TRANSPARENT}
+                        style={{ marginTop: "3px" }} href="https://vendroid.nin0dev.com/settings">
+                        Check for Vendroid updates
+                    </Button>
                 </Flex>
             </Card>
         </SettingsTab>
