@@ -36,7 +36,7 @@ function VendroidTab() {
                     </Button>
                     <Button
                         color={Button.Colors.TRANSPARENT}
-                        style={{ marginTop: "3px" }} href="https://vendroid.nin0dev.com/settings">
+                        href="https://vendroid.nin0dev.com/settings">
                         Check for Vendroid updates
                     </Button>
                 </Flex>
